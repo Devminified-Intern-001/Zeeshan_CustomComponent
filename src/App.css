@@ -7,6 +7,7 @@
 .color{
   background-color: cornflowerblue;
   width: 200px;
+  
 }
 .paragraphhide{
   display: none;
@@ -17,6 +18,11 @@
 .input{
   height: 30px;
   width: 270px;
+
+ 
+}
+.primary{
+  background-color: red;
 }
 .logo {
   height: 6em;

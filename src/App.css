@@ -4,6 +4,9 @@
   padding: 2rem;
   text-align: center;
 }
+.logincontainer{
+  display: flex;
+}
 .color{
   background-color: cornflowerblue;
   width: 200px;

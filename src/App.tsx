@@ -5,7 +5,8 @@ import clsx from 'clsx';
 import SvgIcon from './assets/SvgIcon';
 import CustomInput from './Components/Input';
 import DownArrow from './assets/DownArrow'
-import CustomLoginForm from './Components/Form';
+import CustomLoginForm from './Components/LoginForm';
+import CustomSignup from './Components/SignupForm';
 function App() {
 const [isOpen,setIsOpen]=useState(false)
 const handleclick=()=>{
@@ -49,7 +50,7 @@ const handleclick=()=>{
     <br/>
     <br/>
 
-    <CustomButton variant='primary'  lefticon={<SvgIcon/>} className="btn-primary flex" >Click here</CustomButton>
+    <CustomButton   lefticon={<SvgIcon/>} className="btn-primary flex" >Click here</CustomButton>
     <br/>
     <br/>
     <br/>
@@ -60,6 +61,7 @@ const handleclick=()=>{
     <CustomInput name='softwareExpert' label='Software expert' checked={formdata.softwareExpert} onChange={(e)=>{handlechange(e)}} placeholder='Enter Password' type='checkbox'/>
     <CustomButton  className="btn-primary flex" onClick={handleSubmit} >Login</CustomButton> */}
     <CustomLoginForm/>
+    <CustomSignup/>
     </>
   )
 }

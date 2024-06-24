@@ -6,14 +6,13 @@ interface IButton extends React.HTMLProps<HTMLButtonElement> {
     varient?:string;
     lefticon?:ReactNode;
     righticon?:ReactNode;
-    variant?:string
 }
 const CustomButton = (props:IButton) => {
-    const {children,className,lefticon,righticon,variant,...rest}=props
-    console.log(variant);
+    const {children,className,lefticon,righticon,...rest}=props
+  
     
   return (
-    <button className={className}  variant={variant} {...rest} >{lefticon}{children}{righticon}</button>
+    <button className={className}   {...rest} >{lefticon}{children}{righticon}</button>
   )
 }
 

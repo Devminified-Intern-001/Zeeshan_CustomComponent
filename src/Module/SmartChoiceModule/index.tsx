@@ -12,7 +12,43 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 const SmartChoiceModule = () => {
-  
+  const productdetail=[
+   {
+      imageSrc:image,
+      label:'Italian pizza',
+      description:'product description is here'
+   },
+   {
+      imageSrc:image,
+      label:'Italian pizza',
+      description:'product description is here'
+   },
+   {
+      imageSrc:image,
+      label:'Italian pizza',
+      description:'product description is here'
+   },
+   {
+      imageSrc:image,
+      label:'Italian pizza',
+      description:'product description is here'
+   },
+   {
+      imageSrc:image,
+      label:'Italian pizza',
+      description:'product description is here'
+   },
+   {
+      imageSrc:image,
+      label:'Italian pizza',
+      description:'product description is here'
+   },
+   {
+      imageSrc:image,
+      label:'Italian pizza',
+      description:'product description is here'
+   },
+  ]
   return (
    
       <Swiper
@@ -26,31 +62,17 @@ const SmartChoiceModule = () => {
       onSwiper={(swiper) => console.log(swiper)}
       onSlideChange={() => console.log('slide change')}
     >
-      <SwiperSlide>     
-         <SmartChoice className='absoposition' imageSrc={image} label='Italian pizza' description='product description is here'/>
-      </SwiperSlide>
-      <SwiperSlide>     
-         <SmartChoice className='absoposition' imageSrc={image} label='Italian pizza' description='product description is here'/>
-      </SwiperSlide>
-      <SwiperSlide>     
-         <SmartChoice className='absoposition' imageSrc={image} label='Italian pizza' description='product description is here'/>
-      </SwiperSlide>
-      <SwiperSlide>     
-         <SmartChoice className='absoposition' imageSrc={image} label='Italian pizza' description='product description is here'/>
-      </SwiperSlide>
-      <SwiperSlide>     
-         <SmartChoice className='absoposition' imageSrc={image} label='Italian pizza' description='product description is here'/>
-      </SwiperSlide>
-      <SwiperSlide>     
-         <SmartChoice className='absoposition' imageSrc={image} label='Italian pizza' description='product description is here'/>
-      </SwiperSlide>
-      <SwiperSlide>     
-         <SmartChoice className='absoposition' imageSrc={image} label='Italian pizza' description='product description is here'/>
-      </SwiperSlide>
-      <SwiperSlide>     
-         <SmartChoice className='absoposition' imageSrc={image} label='Italian pizza' description='product description is here'/>
-      </SwiperSlide>
-     
+      
+         {
+            productdetail?.map((iteam)=>{
+               return (<SwiperSlide>
+                 <SmartChoice className='absoposition' imageSrc={image} label={iteam.label} description={iteam.description}/>
+               </SwiperSlide>) 
+            })
+         }
+             
+
+      
     </Swiper>
    
   )

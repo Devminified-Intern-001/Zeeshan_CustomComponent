@@ -12,6 +12,72 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 
 const NavcardModule = () => {
+  const navcardsdetail=[
+    {
+      imageSrc:image1,
+      label:'banana'
+    },
+    {
+      imageSrc:image1,
+      label:'banana'
+    },
+    {
+      imageSrc:image1,
+      label:'banana'
+    },
+    {
+      imageSrc:image1,
+      label:'banana'
+    },
+    {
+      imageSrc:image1,
+      label:'banana'
+    },
+    {
+      imageSrc:image1,
+      label:'banana'
+    },
+    {
+      imageSrc:image1,
+      label:'banana'
+    },
+    {
+      imageSrc:image1,
+      label:'banana'
+    },
+    {
+      imageSrc:image1,
+      label:'banana'
+    },
+    {
+      imageSrc:image1,
+      label:'banana'
+    },
+    {
+      imageSrc:image1,
+      label:'banana'
+    },
+    {
+      imageSrc:image1,
+      label:'banana'
+    },
+    {
+      imageSrc:image1,
+      label:'banana'
+    },
+    {
+      imageSrc:image1,
+      label:'banana'
+    },
+    {
+      imageSrc:image1,
+      label:'banana'
+    },
+    {
+      imageSrc:image1,
+      label:'banana'
+    },
+  ]
   return (
     <Swiper
  
@@ -26,54 +92,13 @@ const NavcardModule = () => {
        onSwiper={(swiper) => console.log(swiper)}
        onSlideChange={() => console.log('slide change')}
     >
-      <SwiperSlide>
-        <NavCards imageSrc={image1} label="banana" />
-      </SwiperSlide>
-      <SwiperSlide>
-        <NavCards imageSrc={image1} label="apple" />
-      </SwiperSlide>
-      <SwiperSlide>
-        <NavCards imageSrc={image1} label="orange" />
-      </SwiperSlide>
-      <SwiperSlide>
-        <NavCards imageSrc={image1} label="mango" />
-      </SwiperSlide>
-      <SwiperSlide>
-        <NavCards imageSrc={image1} label="mango" />
-      </SwiperSlide>
-      <SwiperSlide>
-        <NavCards imageSrc={image1} label="mango" />
-      </SwiperSlide>
-      <SwiperSlide>
-        <NavCards imageSrc={image1} label="mango" />
-      </SwiperSlide>
-      <SwiperSlide>
-        <NavCards imageSrc={image1} label="mango" />
-      </SwiperSlide>
-      <SwiperSlide>
-        <NavCards imageSrc={image1} label="mango" />
-      </SwiperSlide>
-      <SwiperSlide>
-        <NavCards imageSrc={image1} label="mango" />
-      </SwiperSlide>
-      <SwiperSlide>
-        <NavCards imageSrc={image1} label="mango" />
-      </SwiperSlide>
-      <SwiperSlide>
-        <NavCards imageSrc={image1} label="mango" />
-      </SwiperSlide>
-      <SwiperSlide>
-        <NavCards imageSrc={image1} label="mango" />
-      </SwiperSlide>
-      <SwiperSlide>
-        <NavCards imageSrc={image1} label="mango" />
-      </SwiperSlide>
-      <SwiperSlide>
-        <NavCards imageSrc={image1} label="mango" />
-      </SwiperSlide>
-      <SwiperSlide>
-        <NavCards imageSrc={image1} label="mango" />
-      </SwiperSlide>
+      {
+        navcardsdetail.map((iteam)=>{
+          return  <SwiperSlide>
+        <NavCards imageSrc={iteam.imageSrc} label={iteam.label} />
+          </SwiperSlide>
+        })
+      }
      
     </Swiper>
   );

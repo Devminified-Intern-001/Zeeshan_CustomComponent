@@ -53,7 +53,8 @@ const HomePage = () => {
      { 
      featurd_data?.map((iteam)=>{
       // const {name,price,image,quantity}=iteam
-      return  <Featured productName={iteam.name}  image={iteam.image} onClick={handleCounter} />
+      return  (<div><Featured productName={iteam.name}  image={iteam.image} onClick={handleCounter} /></div>
+     )
       }
       )
      } 

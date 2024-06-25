@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import CustomButton from '../Button'
-import CustomInput from '../Input'
+import CustomButton from '../../Components/Button/index'
+import CustomInput from '../../Components/Input'
 import SvgIcon from '../../assets/SvgIcon'
 const CustomSignup = () => {
     const [formdata, setFormData]=useState({
@@ -32,13 +32,13 @@ const CustomSignup = () => {
     <h1>SignUp to get started</h1>
     <p>Already a user? <a href="#">lets Sign-in</a></p>
     <br />
-    <CustomInput  name='username' Ilabel='Username' value={formdata.username} onChange={(e)=>{handlechange(e)}} placeholder='Enter Username' type='text'  className='input' />
+    <CustomInput  name='username' label='Username' value={formdata.username} onChange={(e)=>{handlechange(e)}} placeholder='Enter Username' type='text'  className='input' />
   <br/>
-  <CustomInput  name='email' Ilabel='Email' value={formdata.email} onChange={(e)=>{handlechange(e)}} placeholder='Enter a vaild Email' type='email'  className='input' />
+  <CustomInput  name='email' label='Email' value={formdata.email} onChange={(e)=>{handlechange(e)}} placeholder='Enter a vaild Email' type='email'  className='input' />
   <br/>
-  <CustomInput name='password' Ilabel='Password' value={formdata.password} onChange={(e)=>{handlechange(e)}} placeholder='Enter Password' type='password' className='input'/>
+  <CustomInput name='password' label='Password' value={formdata.password} onChange={(e)=>{handlechange(e)}} placeholder='Enter Password' type='password' className='input'/>
   <br/>
-  <CustomInput name='terms' Irightlabel="Creating an account meana you're okay with our term and services,pravicy policy and our default notification settings" checked={formdata.terms} onChange={(e)=>{handlechange(e)}}  type='checkbox'/>
+  <CustomInput name='terms' rightlabel="Creating an account meana you're okay with our term and services,pravicy policy and our default notification settings" checked={formdata.terms} onChange={(e)=>{handlechange(e)}}  type='checkbox'/>
 <br />
   <CustomButton  className="btn-primary flex" onClick={handleSubmit} >Sign in</CustomButton>
   <CustomButton  className="btn-primary flex" onClick={handleSubmit} lefticon={<SvgIcon/>}>Sign in with google</CustomButton>

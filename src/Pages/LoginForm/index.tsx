@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
-import CustomButton from '../Button'
-import CustomInput from '../Input'
+import CustomButton from '../../Components/Button/index'
+import CustomInput from '../../Components/Input'
 import SvgIcon from '../../assets/SvgIcon'
 const CustomLoginForm = () => {
   const [formdata, setFormData]=useState({
@@ -33,9 +33,9 @@ const CustomLoginForm = () => {
       <h1>Welocme to start</h1>
       <p>New Here?<a href="#">Create an Account</a></p>
       <br />
-    <CustomInput  name='username' Ilabel='Username' value={formdata.username} onChange={(e)=>{handlechange(e)}} placeholder='Enter Username' type='text'  className='input' />
+    <CustomInput  name='username' label='Username' value={formdata.username} onChange={(e)=>{handlechange(e)}} placeholder='Enter Username' type='text'  className='input' />
     <br/>
-    <CustomInput name='password' Ilabel='Password' value={formdata.password} onChange={(e)=>{handlechange(e)}} placeholder='Enter Password' type='password' className='input'/>
+    <CustomInput name='password' label='Password' value={formdata.password} onChange={(e)=>{handlechange(e)}} placeholder='Enter Password' type='password' className='input'/>
     <br/>
     <CustomButton  className="btn-primary flex" onClick={handleSubmit} >Sign in</CustomButton>
     <CustomButton  className="btn-primary flex" onClick={handleSubmit} lefticon={<SvgIcon/>}>Sign in with google</CustomButton>

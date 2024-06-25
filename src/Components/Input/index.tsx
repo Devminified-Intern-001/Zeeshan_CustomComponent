@@ -1,16 +1,16 @@
 import React, { InputHTMLAttributes, ReactNode } from 'react'
 interface Iinput  extends InputHTMLAttributes<HTMLInputElement> {
-    IclassName?:string;
-    Ilabel?:string;
-    Irightlabel?:string;
-    Irighticon?:ReactNode;
+    className?:string;
+    label?:string;
+    rightlabel?:string;
+    righticon?:ReactNode;
 
 }
 function CustomInput(props:Iinput) {
-    const {IclassName,Ilabel,Irighticon,Irightlabel,...rest}=props
+    const {className,label,righticon,rightlabel,...rest}=props
   return (
     <div>
-    {Ilabel}<br/><input className={IclassName}  {...rest}/>{Irighticon}{Irightlabel}
+    {label}<br/><input className={className}  {...rest}/>{righticon}{rightlabel}
     </div>
       )
 }

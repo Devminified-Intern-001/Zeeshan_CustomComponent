@@ -4,6 +4,13 @@
   padding: 2rem;
   text-align: center;
 }
+.mainmodel{
+  display: flex;
+  justify-content: center;
+}
+.model{
+  width: 50%;
+}
 .featured{
   display: flex;  
   

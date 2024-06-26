@@ -8,7 +8,7 @@ interface IButton extends React.HTMLProps<HTMLButtonElement> {
 }
 const CustomButton = (props:IButton) => {
     const {children,className,lefticon,righticon,...rest}=props
-  console.log("im",children);
+  // console.log("im",children);
   
     
   return (

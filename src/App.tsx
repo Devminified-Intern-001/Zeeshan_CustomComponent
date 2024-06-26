@@ -11,14 +11,19 @@ import LandingNavbar from './Components/LandingNavbar';
 import Footer from './Components/Footer';
 import Navbar from './Components/Navbar';
 import HomePage from './Pages/HomePage';
+import Model from './Components/Model';
 
 function App() {
 const [isOpen,setIsOpen]=useState(false)
 const handleclick=()=>{
-  setIsOpen(!isOpen)
+  setIsOpen(true)
   // console.log(isOpen);
   // console.log('click');
-  
+
+}
+const handleclose=()=>{
+  setIsOpen(false)
+
 }
 // const [formdata, setFormData]=useState({
 //   username:'',
@@ -44,10 +49,14 @@ const handleclick=()=>{
 
   return (
     <>
-    {/* <CustomButton   className='color' onClick={handleclick} righticon={<SvgIcon/>}>{isOpen ? "hide":"show" } </CustomButton> */}
+    <CustomButton   className='color' onClick={handleclick} righticon={<SvgIcon/>}>{isOpen ? "hide":"show" } </CustomButton>
     {/* <div className={`paragraphhide ${isOpen ? "paragrapshow":"" }`}>
       Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis eos sit culpa quos eaque, reprehenderit mollitia temporibus necessitatibus sequi tenetur aperiam doloremque voluptas impedit provident quia blanditiis doloribus nam sed.
     </div> */}
+    
+        <Model onclose={handleclose} open={isOpen} title='hi im title' description='Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, nisi sapiente iste laborum tenetur quae cumque nemo ipsam voluptates nihil. Deleniti distinctio dolor officiis nisi, rem facilis cupiditate unde vel!'>
+        </Model>
+  
     {/* <div className={clsx('paragraphhide',{'paragrapshow':isOpen})}>
       Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis eos sit culpa quos eaque, reprehenderit mollitia temporibus necessitatibus sequi tenetur aperiam doloremque voluptas impedit provident quia blanditiis doloribus nam sed.
     </div>

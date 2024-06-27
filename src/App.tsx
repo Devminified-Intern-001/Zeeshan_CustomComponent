@@ -1,6 +1,6 @@
 import CustomButton from './Components/Button'
 import './App.css'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import clsx from 'clsx';
 import SvgIcon from './assets/SvgIcon';
 import CustomInput from './Components/Input';
@@ -13,16 +13,25 @@ import Navbar from './Components/Navbar';
 import HomePage from './Pages/HomePage';
 import Model from './Components/Model';
 
+import NewApp from './Components/NewApp';
+
 function App() {
+ 
+ 
 const [isOpen,setIsOpen]=useState(false)
 const handleclick=()=>{
   setIsOpen(true)
+    document.body.style.overflowY='hidden'
+
   // console.log(isOpen);
   // console.log('click');
 
 }
 const handleclose=()=>{
   setIsOpen(false)
+  document.body.style.overflowY='scroll'
+  
+
 
 }
 // const [formdata, setFormData]=useState({
@@ -49,13 +58,14 @@ const handleclose=()=>{
 
   return (
     <>
+   
     {/* <CustomButton   className='color' onClick={handleclick} righticon={<SvgIcon/>}>{isOpen ? "hide":"show" } </CustomButton> */}
     {/* <div className={`paragraphhide ${isOpen ? "paragrapshow":"" }`}>
       Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis eos sit culpa quos eaque, reprehenderit mollitia temporibus necessitatibus sequi tenetur aperiam doloremque voluptas impedit provident quia blanditiis doloribus nam sed.
     </div> */}
-{/*     
-        <Model onclose={handleclose} open={isOpen} title='hi im title' description='Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, nisi sapiente iste laborum tenetur quae cumque nemo ipsam voluptates nihil. Deleniti distinctio dolor officiis nisi, rem facilis cupiditate unde vel!'>
-        </Model> */}
+    
+        {/* <NewApp onclose={handleclose} open={isOpen} title='hi im title' description='Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, nisi sapiente iste laborum tenetur quae cumque nemo ipsam voluptates nihil. Deleniti distinctio dolor officiis nisi, rem facilis cupiditate unde vel!'>
+        </NewApp> */}
   
     {/* <div className={clsx('paragraphhide',{'paragrapshow':isOpen})}>
       Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis eos sit culpa quos eaque, reprehenderit mollitia temporibus necessitatibus sequi tenetur aperiam doloremque voluptas impedit provident quia blanditiis doloribus nam sed.
@@ -86,3 +96,4 @@ const handleclose=()=>{
 }
 
 export default App
+

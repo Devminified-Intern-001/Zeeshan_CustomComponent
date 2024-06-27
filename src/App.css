@@ -4,6 +4,10 @@
   padding: 2rem;
   text-align: center;
 }
+.ReactModal__Overlay {
+  z-index: 1;
+
+}
 .mainmodel{
   display: flex;
   justify-content: center;
@@ -30,6 +34,7 @@ position: relative;
 .swiper_navcard_module{
   width: 50%;
   margin-bottom: 20px;
+  z-index: -10000;
  
 }
 /* search module */

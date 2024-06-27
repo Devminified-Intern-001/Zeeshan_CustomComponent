@@ -2,7 +2,7 @@ import React from 'react';
 import NavCards from '../../Components/NavCards';
 import image1 from '../../assets/fruit1.png';
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
-
+import '../../App.css'
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles

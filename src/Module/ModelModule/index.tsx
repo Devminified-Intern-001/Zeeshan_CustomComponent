@@ -1,13 +1,16 @@
 import React, { ReactNode, useEffect } from 'react';
 import CustomButton from '../../Components/Button';
 import ReactDOM from 'react-dom';
+import CustomInput from '../../Components/Input';
 
 interface Iprops {
+  children:ReactNode;
   className?: string;
   title?: string;
   description?: string;
   open?: boolean;
   onclose?: ReactNode;
+  
 }
 const modelstyle = {
   position: 'fixed',
@@ -25,23 +28,19 @@ const overlaystyle = {
   bottom: 0,
   right: 0,
   backgroundColor: 'rgba(0,0,0,.7)',
-  zIndex: 2,
+  zIndex: 2000000,
 };
 const ModelModule = (props: Iprops) => {
-  useEffect(() => {
-    // document.body.style.overflowY='hidden'
-    return () => {
-      document.body.style.overflowY = 'scroll';
-    };
-  }, []);
-  const { className, open, title, description, onclose, ...rest } = props;
+ 
+  const { className, open, title, description, onclose,children, ...rest } = props;
   if (open == false) return null;
   return ReactDOM.createPortal(
     <div className="overlay" style={overlaystyle} {...rest}>  
-      <div className="modal" id="moodal" style={modelstyle}>
+      <div className="modal" id="moodal" style={modelstyle} onClick={e=> e.stopPropagation()}> 
         {title}
         <br />
         {description}
+        {children}
         <CustomButton {...rest}>cancel</CustomButton>
       </div>
     </div>,

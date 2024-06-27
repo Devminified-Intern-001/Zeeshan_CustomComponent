@@ -37,7 +37,7 @@ const Model = (props:Iprops) => {
 if(open==false)return null
   return ReactDOM.createPortal (
     <div style={overlaystyle} onClick={onclose}>
-    <div style={modelstyle} >
+    <div style={modelstyle} onClick={e=> e.stopPropagation()}>
       {title}
       <br />{description}
       <CustomButton onClick={onclose}>cancel</CustomButton>
